@@ -6,7 +6,7 @@ export const thalassemias: Anemia = {
   altNames: ['Mediterranean anemia', 'thalassemia major and minor'],
   definition:
     'Group of inherited diseases due to disruption in manufacturing one of the four amino acid chains that compose hemoglobin.',
-  branches: ['microcytic', 'genetic', 'hemolytic', 'decreased-production'],
+  branches: ['microcytic', 'genetic', 'hemolytic', 'hemolysis', 'decreased-production'],
   inheritedOrAcquired: 'inherited',
   cause:
     'Genetic mutations affecting alpha or beta globin chain synthesis. Alpha-thalassemia more common in people of African, Mediterranean, or Southeast Asian origin. Beta-thalassemia more common in people of Mediterranean, Indian, Middle Eastern, or Southeast Asian origin.',

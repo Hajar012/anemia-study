@@ -6,7 +6,7 @@ export const sickleCellDisease: Anemia = {
   altNames: ['Sickle cell anemia (for Hb SS)'],
   definition:
     'Lifelong inherited disorder causing some red blood cells to be sickle-shaped (crescent-shaped) instead of disk-shaped.',
-  branches: ['normocytic', 'genetic', 'hemolytic'],
+  branches: ['normocytic', 'genetic', 'hemolytic', 'hemolysis'],
   inheritedOrAcquired: 'inherited',
   cause:
     'Caused by genes passed from parents. Need two sickle cell genes (one from each parent) to have sickle cell disease. Sickle cell trait occurs with only one copy of the sickle cell gene and one normal copy.',

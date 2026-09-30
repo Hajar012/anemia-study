@@ -11,7 +11,7 @@ export const hereditarySpherocytosisAndElliptocytosis: Anemia = {
   ],
   definition:
     'Congenital disorders of the RBC membrane causing mild hemolytic anemia.',
-  branches: ['normocytic', 'hemolytic', 'genetic'],
+  branches: ['normocytic', 'hemolytic', 'hemolysis', 'genetic'],
   inheritedOrAcquired: 'inherited',
   cause:
     'Hereditary spherocytosis is an autosomal dominant disease with variable gene penetrance due to mutations in spectrin, ankyrin, band 3, or protein 4.2. Approximately 25% of cases are sporadic (de novo dominant mutation) or autosomal recessive (rare).',

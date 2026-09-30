@@ -6,7 +6,7 @@ export const g6pdDeficiency: Anemia = {
   altNames: ['Favism (when triggered by fava beans)'],
   definition:
     'Inherited enzyme deficiency causing episodic hemolytic anemia triggered by oxidative stress.',
-  branches: ['normocytic', 'hemolytic', 'genetic'],
+  branches: ['normocytic', 'hemolytic', 'hemolysis', 'genetic'],
   inheritedOrAcquired: 'inherited',
   cause:
     'X-linked genetic deficiency of glucose-6-phosphate dehydrogenase, an enzyme in the hexose monophosphate shunt pathway that protects RBCs from oxidative damage.',

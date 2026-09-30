@@ -83,9 +83,30 @@ function accentStyle(accentVar: string): CSSProperties {
   return { '--accent': `var(${accentVar})` } as CSSProperties;
 }
 
-export function AnemiaDetail({ anemia }: { anemia: Anemia }) {
+type AnemiaDetailProps = {
+  anemia: Anemia;
+  keyCluesOnly?: boolean;
+};
+
+export function AnemiaDetail({ anemia, keyCluesOnly = false }: AnemiaDetailProps) {
   const { clinicalFeatures } = anemia;
   const complications = clinicalFeatures.complications ?? [];
+
+  if (keyCluesOnly) {
+    return (
+      <article className="detail-inner">
+        <header className="detail-header">
+          <h2 className="detail-name">{anemia.name}</h2>
+          <p className="detail-def">{anemia.definition}</p>
+        </header>
+        <Section title="Key clues">
+          <KeyCluesBox
+            clues={listHasContent(anemia.keyClues) ? anemia.keyClues : [NOT_SPECIFIED]}
+          />
+        </Section>
+      </article>
+    );
+  }
 
   return (
     <article className="detail-inner">
@@ -97,16 +118,19 @@ export function AnemiaDetail({ anemia }: { anemia: Anemia }) {
         <p className="detail-def">{anemia.definition}</p>
       </header>
 
-      <div className="chips">
-        {anemia.branches.map((branch) => {
-          const meta = branchMeta.get(branch);
-          if (!meta) return null;
-          return (
-            <span key={branch} className="chip" style={accentStyle(meta.accentVar)}>
-              {meta.label}
-            </span>
-          );
-        })}
+      <div className="also-in">
+        <span className="chips-label muted">Also in:</span>
+        <div className="chips">
+          {anemia.branches.map((branch) => {
+            const meta = branchMeta.get(branch);
+            if (!meta) return null;
+            return (
+              <span key={branch} className="chip" style={accentStyle(meta.accentVar)}>
+                {meta.label}
+              </span>
+            );
+          })}
+        </div>
       </div>
 
       <Section title="Cause">
